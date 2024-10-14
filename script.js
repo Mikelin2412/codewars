@@ -261,27 +261,22 @@ function timeCorrect(timestring) {
 }
 console.log(timeCorrect("24:99:99")); // start from seconds, then minutes, then hours
 
-function strCount(obj) {
-  let counter = 0;
+// Count strings in objects
+// function strCount(obj) {
+//   let counter = 0;
+//   function checkItems(item) {
+//     if (typeof item === "string") {
+//       counter++;
+//     } else if (Array.isArray(item)) {
+//       item.forEach((el) => checkItems(el));
+//     } else if (typeof item === "object" && item !== null) {
+//       Object.values(item).forEach((el) => checkItems(el));
+//     }
+//   }
+//   checkItems(obj);
+//   return counter;
+// }
 
-  for (let key in obj) {
-    if (typeof obj[key] === "string") counter++;
-    console.log(obj[key]);
-  }
-
-  return counter;
-}
-console.log(
-  strCount({
-    first: "1",
-    second: "2",
-    third: false,
-    fourth: ["anytime", 2, 3, 4],
-    fifth: null,
-    sixth: undefined,
-    seventh: {},
-  })
-);
 
 // 6 Kata
 
